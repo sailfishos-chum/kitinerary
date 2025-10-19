@@ -11,6 +11,8 @@ Url:        https://invent.kde.org/pim/kitinerary
 #Source0:    https://invent.kde.org/pim/%{name}/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
 Source0:    %{name}-%{version}.tar.bz2
 
+Provides:   %{pkgname} = %{version}-%{release}
+
 BuildRequires: cmake
 BuildRequires: kf6-extra-cmake-modules >= %kf6_version
 BuildRequires: gcc-c++
@@ -55,6 +57,7 @@ calendar events, and provides that in a machine-readable way.
 Summary:    Development files for %{name}
 License:    ASL-2.0 and BSD-3-Clause and CC0-1.0 and LGPLv2+
 Requires:   %{name}%{?_isa} = %{version}-%{release}
+Provides:   %{pkgname}-devel = %{version}-%{release}
 
 %description devel
 The %{name}-devel package contains libraries and header files for
